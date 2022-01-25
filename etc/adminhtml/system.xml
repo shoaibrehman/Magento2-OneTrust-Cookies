@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="shoman" translate="label" sortOrder="999">
+            <label>Shoman</label>
+        </tab>
+        <section id="onetrust" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+            <label>OneTrust</label>
+            <tab>shoman</tab>
+            <resource>Shoman_OneTrust::config_shoman_onetrust</resource>
+            <group id="general" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+                <label>General Settings</label>
+                <field id="enabled" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1"
+                       translate="label">
+                    <label>Enabled</label>
+                    <comment/>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="siteid" type="text" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1"
+                       translate="label">
+                    <label>Site ID</label>
+                    <comment>Get your OneTrust Site ID from your account.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

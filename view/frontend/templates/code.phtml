@@ -1,0 +1,20 @@
+<?php
+$siteId = $this->helper('Shoman\OneTrust\Helper\Data')->getSiteId();
+?>
+<!-- OneTrust Cookies Consent Notice start -->
+<script type="text/javascript"
+        src="https://cdn-ukwest.onetrust.com/consent/<?= $siteId ?>/OtAutoBlock.js"></script>
+<script src="https://cdn-ukwest.onetrust.com/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8"
+        data-domain-script="<?= $siteId ?>"></script>
+<script type="text/javascript">
+    function OptanonWrapper() {
+    }
+</script>
+<!-- OneTrust Cookies Consent Notice end -->
+
+<script>
+    var BASE_URL = '<?= $block->escapeUrl($block->getBaseUrl()) ?>';
+    var require = {
+        "baseUrl": "<?= /* @escapeNotVerified */ $block->getViewFileUrl('/') ?>"
+    };
+</script>

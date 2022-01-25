@@ -1,0 +1,22 @@
+{
+  "name": "shoman/module-onetrust",
+  "description": "Module to integrate OneTrust Cookie Script",
+  "type": "magento2-module",
+  "license": "GPL-3.0",
+  "authors": [
+    {
+      "name": "Shoaib Rehman",
+      "email": "magepressuk@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {},
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Shoman\\OneTrust\\": ""
+    }
+  }
+}
